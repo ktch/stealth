@@ -1,0 +1,100 @@
+	<div id="wrapper"></div>
+	<ul id="nav">
+		<li class="selected" onclick="gallery.goToPage(0)"></li>
+		<li onclick="gallery.goToPage(1)"></li>
+		<li onclick="gallery.goToPage(2)"></li>
+		<li onclick="gallery.goToPage(3)"></li>
+		<li onclick="gallery.goToPage(4)"></li>
+		<li onclick="gallery.goToPage(5)"></li>
+	</ul>
+	
+	<a class="nav" id="prev" onclick="gallery.prev()">previous</a>
+	<a class="nav" id="next" onclick="gallery.next()">next</a>
+	
+<script type="text/javascript">
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+var	gallery,
+	el,
+	i,
+	page,
+	dots = document.querySelectorAll('#nav li'),
+	slides = [
+			{
+				cont: '<h2>This is a good thing</h2>',
+				tex: 'The world is changing'
+			},
+			{
+				cont: '<h2>This is also a good thing</h2>',
+				tex: 'The world is changing'
+			},
+			{
+				cont: '<h2>This is a very good thing</h2>',
+				tex: 'The world is changing'
+			},
+			{
+				cont: '<h2>This is the best thing</h2>',
+				tex: 'The world is changing'
+			},
+			{
+				cont: '<h2>This is the best thing of all</h2>',
+				tex: 'The world is changing'
+			},
+			{
+				cont: '<audio controls="controls">\
+				<source src="caseexample.m4a" type="audio/mp3" />\
+				Your browser does not support the audio element.\
+				</audio>',
+				tex: 'The world is changing'
+			}
+	];
+
+gallery = new SwipeView('#wrapper', { numberOfPages: slides.length,
+	 																		loop: false });
+
+// Load initial data
+for (i=0; i<3; i++) {
+	page = i==0 ? slides.length-1 : i-1;
+	el = document.createElement('figure');
+	el.className = 'loading';
+	el.innerHTML = slides[page].cont;
+	el.onload = function () { this.className = ''; }
+	gallery.masterPages[i].appendChild(el);
+
+	el = document.createElement('aside');
+	el.innerHTML = slides[page].tex;
+	gallery.masterPages[i].appendChild(el)
+}
+
+gallery.onFlip(function () {
+	var el,
+		upcoming,
+		i;
+
+	for (i=0; i<3; i++) {
+		upcoming = gallery.masterPages[i].dataset.upcomingPageIndex;
+
+		if (upcoming != gallery.masterPages[i].dataset.pageIndex) {
+			el = gallery.masterPages[i].querySelector('figure');
+			el.className = 'loading';
+			el.innerHTML = slides[upcoming].cont;
+			
+			el = gallery.masterPages[i].querySelector('aside');
+			el.innerHTML = slides[upcoming].tex;
+		}
+	}
+	
+	document.querySelector('#nav .selected').className = '';
+	dots[gallery.pageIndex].className = 'selected';
+});
+
+gallery.onMoveOut(function () {
+	gallery.masterPages[gallery.currentMasterPage].className = gallery.masterPages[gallery.currentMasterPage].className.replace(/(^|\s)swipeview-active(\s|$)/, '');
+});
+
+gallery.onMoveIn(function () {
+	var className = gallery.masterPages[gallery.currentMasterPage].className;
+	/(^|\s)swipeview-active(\s|$)/.test(className) || (gallery.masterPages[gallery.currentMasterPage].className = !className ? 'swipeview-active' : className + ' swipeview-active');
+});
+
+</script>
