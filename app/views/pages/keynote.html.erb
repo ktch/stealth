@@ -6,10 +6,20 @@
 		<li onclick="gallery.goToPage(3)"></li>
 		<li onclick="gallery.goToPage(4)"></li>
 		<li onclick="gallery.goToPage(5)"></li>
+		<li onclick="gallery.goToPage(6)"></li>
+		<li onclick="gallery.goToPage(7)"></li>
+		<li onclick="gallery.goToPage(8)"></li>
+		<!-- <li onclick="gallery.goToPage(9)"></li>
+				<li onclick="gallery.goToPage(10)"></li> -->
 	</ul>
 	
-	<a class="nav" id="prev" onclick="gallery.prev()">previous</a>
-	<a class="nav" id="next" onclick="gallery.next()">next</a>
+	<nav>
+		<a id="prev" onclick="gallery.prev()"><</a>
+		<a id="next" onclick="gallery.next()">></a>
+	</nav>
+	
+	<!-- <a class="nav" id="prev" onclick="gallery.prev()">previous</a>
+		<a class="nav" id="next" onclick="gallery.next()">next</a> -->
 	
 <script type="text/javascript">
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
@@ -21,31 +31,50 @@ var	gallery,
 	dots = document.querySelectorAll('#nav li'),
 	slides = [
 			{
-				cont: '<h2>This is a good thing</h2>',
-				tex: 'The world is changing'
+				cont: '<%= image_tag "consensuslogo.png", :title => "Clinical Consensus", :class => "frontlogo" %>',
+				tex: '<p>Physicians’ don’t process <strong>content</strong> — they process <strong>context</strong>.</p>\
+				<p><em>Please swipe to the next frame ⇢</em></p>\
+				<footer><p>Part of <%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></p></footer>'
 			},
 			{
-				cont: '<h2>This is also a good thing</h2>',
-				tex: 'The world is changing'
+				cont: '<h2>Words are important.</h2>',
+				tex: '<p>But research shows that effective communication has less to do with content and more to do with the context in which content is delivered.</p>'
 			},
 			{
-				cont: '<h2>This is a very good thing</h2>',
-				tex: 'The world is changing'
+				cont: '<h2>The environment is noisy.</h2>',
+				tex: "<p>The available platforms for medical educational programming are producing a lot of content, but without the right context; for meaningful solutions to patient care, for changing clinical practice to keep up with the latest advances in therapy, and for dynamic peer-to-peer clinical exchange.</p>"
 			},
 			{
-				cont: '<h2>This is the best thing</h2>',
-				tex: 'The world is changing'
+				cont: '<h2>Enter the mobile web.</h2>',
+				tex: '<p>Clinical Consensus provides the appropriate context by sending specific cases to doctors by text message and email. The case is provided with a survey of questions. <a href="#survey"><em>View an example survey</em>.</a></p>'
 			},
 			{
-				cont: '<h2>This is the best thing of all</h2>',
-				tex: 'The world is changing'
+				cont: '<img src="communication.png" alt="Communication">',
+				tex: '<p>As the results are evaluated, physicians have the opportunity to bring up questions, to interface with key opinion leaders, and to discuss the case with one another on private discussion boards.</p>'
 			},
 			{
-				cont: '<audio controls="controls">\
+				cont: '<h2>Results</h2>',
+				tex: '<p>At the end of the case, the key opinion leader publishes the results and shares data, solutions, and expert knowledge, which is delivered to participating physicians by email or text message.</p>'
+			},
+			{
+				cont: '<h2>Accompanied by audio...</h2>\
+				<audio controls="controls">\
 				<source src="caseexample.m4a" type="audio/mp3" />\
 				Your browser does not support the audio element.\
 				</audio>',
-				tex: 'The world is changing'
+				tex: '<p><em>You can listen to the sample above.</em></p>'
+			},
+			{
+				cont: '<h2>...and video.</h2>\
+				<video width="270" height="160" controls="controls">\
+				  <source src="kolsample.mp4" type="video/mp4" />\
+				  Your browser does not support the video tag.\
+				</video>',
+				tex: '<p></p>'
+			},
+			{
+				cont: '<h2>Medical education meets the modern era.</h2>',
+				tex: '<p>Please engage with us on this great opportunity.</p>'
 			}
 	];
 

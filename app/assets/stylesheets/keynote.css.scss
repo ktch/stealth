@@ -5,9 +5,43 @@ $yellow: #f5e201;
 
 #pages_controller {
 	
-	h1 {
-		color:#fff;
-		z-index:10000;
+	p {
+		margin-top:7px;
+		font-size:16px;
+		@media screen and (min-width:321px) {
+				font-size:25px;
+		}
+	}
+
+	h2 {
+		color:$red;
+		margin-left:15px;
+	}
+	
+	img.frontlogo {
+		width:90%;
+		margin:10px 15px;
+		@media screen and (min-width:321px) {
+				width:50%;
+		}
+	}
+	
+	img.sentencelogo {
+		height:25px;
+		margin-bottom:-3px;
+	}
+	
+	footer {
+		position:absolute;
+		bottom:4px;
+		left:32px;
+		p {
+			font-size:12px;
+		}
+	}
+	
+	video, audio {
+		margin-left:15px;
 	}
 
 	#wrapper {
@@ -19,12 +53,12 @@ $yellow: #f5e201;
 	#nav {
 		position:absolute;
 		z-index:100;
-		top:8px;
-		width:260px;
+		top:10px;
+		width:250px;
 		height:15px;
 		left:50%;
 		padding:2px 2px 2px 7px;
-		margin:0 0 0 -130px;
+		margin:0 0 0 -125px;
 		@include rounded(20px);
 	}
 
@@ -42,23 +76,33 @@ $yellow: #f5e201;
 		text-align:center;
 	}
 	
-	a.nav {
+	nav {
+		font-size:30px;
+		font-weight:bold;
+		width:100%;
 		position:absolute;
-		top:5px;
-	}
-	
-	a#prev {
-		color:$orange;
-		left:15px;
-	}
-	
-	a#next {
-		color:$orange;
-		right:15px;
+		z-index:10;
+		bottom:45px;
+		a#prev {
+			position:absolute;
+			color:$orange;
+			left:7px;
+		}
+		a#next {
+			position:absolute;
+			color:$orange;
+			right:7px;
+		}
 	}
 	
 	div.swipe_instruct {
 		float:left;
+	}
+	
+	figure {
+		width:100%;
+		text-align:left;
+		margin:0;
 	}
 
 	#nav li.selected {
@@ -75,29 +119,21 @@ $yellow: #f5e201;
 	}
 
 	#swipeview-slider aside {
-		width:80%;
-		padding:20px 0;
+		width:100%;
+		padding:0;
 		display:block;
 		font-size:20px;
 		text-align:left;
 		opacity:0;
 		-webkit-transition:opacity 1.5s linear;
 		-webkit-transition-delay:.3s;
+		p {
+			margin:7px 15px 0px 15px;
+		}
 	}
 
 	#swipeview-slider .swipeview-active aside {
 		opacity:1;
 	}
-
-	/* #wrapper > div > .swipeview-loading figure,
-	#swipeview-slider figure.loading {
-		-webkit-transition-duration:0;
-		opacity:0;
-	}
-
-	#wrapper > figure > .swipeview-loading span {
-		-webkit-transition-duration:0;
-		-webkit-transform:translate3d(0,100%,0);
-	} */
 
 }	
