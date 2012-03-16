@@ -6,11 +6,31 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<title>Clinical Consensus — by N*Site</title>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 	<%= stylesheet_link_tag    "application" %>
 	<%= javascript_include_tag "application" %>
 	<%= csrf_meta_tags %>
 	<script type="text/javascript" src="http://use.typekit.com/dbv3fkm.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function () {
+		  function reorient(e) {
+		    var portrait = (window.orientation % 180 == 0);
+		    $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
+		  }
+		  window.onorientationchange = reorient;
+		  window.setTimeout(reorient, 0);
+		});
+	</script>
+	<script type="text/javascript">
+		var myScroll;
+		function loaded() {
+			setTimeout(function () {
+				myScroll = new iScroll('survey');
+			}, 300);
+		}
+		window.addEventListener('load', loaded, false);
+	</script>
 </head>
 
 <body id="<%= params[:controller].parameterize %>_controller">

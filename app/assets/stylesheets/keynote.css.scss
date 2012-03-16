@@ -5,10 +5,15 @@ $yellow: #f5e201;
 
 #pages_controller {
 	
+	a {
+		color:$orange;
+	}
+	
 	p {
-		margin-top:7px;
+		margin:4px 15px 4px 15px;
 		font-size:16px;
-		@media screen and (min-width:321px) {
+		line-height:19px;
+		@media screen and (min-width:481px) {
 				font-size:25px;
 		}
 	}
@@ -16,12 +21,20 @@ $yellow: #f5e201;
 	h2 {
 		color:$red;
 		margin-left:15px;
+		line-height:25px;
+		@media screen and (min-width:481px) {
+				font-size:45px;
+				line-height:50px;
+		}
 	}
 	
 	img.frontlogo {
 		width:90%;
-		margin:10px 15px;
+		margin:-20px 10px 0 10px;
 		@media screen and (min-width:321px) {
+				width:75%;
+		}
+		@media screen and (min-width:481px) {
 				width:50%;
 		}
 	}
@@ -31,17 +44,29 @@ $yellow: #f5e201;
 		margin-bottom:-3px;
 	}
 	
+	img.text {
+		width:200px;
+	}
+	
 	footer {
 		position:absolute;
-		bottom:4px;
-		left:32px;
+		width:262px;
+		left:50%;
+		bottom:11px;
+		margin-left:-131px;
 		p {
 			font-size:12px;
 		}
 	}
 	
-	video, audio {
+	video {
 		margin-left:15px;
+		width:90%;
+	}
+	
+	audio {
+		margin-left:15px;
+		margin-top:20px;
 	}
 
 	#wrapper {
@@ -82,7 +107,7 @@ $yellow: #f5e201;
 		width:100%;
 		position:absolute;
 		z-index:10;
-		bottom:45px;
+		bottom:35px;
 		a#prev {
 			position:absolute;
 			color:$orange;
@@ -120,20 +145,39 @@ $yellow: #f5e201;
 
 	#swipeview-slider aside {
 		width:100%;
-		padding:0;
+		padding:10px 0 0 0;
 		display:block;
 		font-size:20px;
 		text-align:left;
 		opacity:0;
 		-webkit-transition:opacity 1.5s linear;
 		-webkit-transition-delay:.3s;
-		p {
-			margin:7px 15px 0px 15px;
-		}
 	}
 
 	#swipeview-slider .swipeview-active aside {
 		opacity:1;
+	}
+	
+	#survey {
+		height:290px;
+		width:280px;
+		padding:0 10px 50px 10px;
+		margin:-170px 0px 0px -150px;
+		h2 {
+			font-size:25px;
+			margin:20px 0 20px 15px;
+			padding-right:20px;
+		}
+		p {
+			margin-bottom:10px;
+			font-size:16px;
+			line-height:19px;
+		}
+		a.closesurvey {
+			position:absolute;
+			top:0;
+			right:0;
+		}
 	}
 
 }	

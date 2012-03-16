@@ -18,8 +18,80 @@
 		<a id="next" onclick="gallery.next()">></a>
 	</nav>
 	
+	<div id="survey" class="modal hide fade">
+		<div id="scrollcontainer">
+		<h2>Case Example</h2><a class="btn danger closemodal closesurvey" data-dismiss="modal" href="#survey">Close</a>
+			
+
+			<p>A 63 YO congressman developed severe DOE while skiing in Colorado and was found to have a Hgb of 7.4.  Colonoscopy revealed a nearly obstructing fungating mass at 50 cm that was biopsy positive for a moderately differentiated mucinous adenocarcinoma.  A CT scan showed mild emphysematous changes in her lungs and a single 1.5 cm RLL nodule along with at least 5 hepatic metastases with the largest measuring 3.4 cm involving the portal vein.  She is recovering from his laparoscopic left hemicolectomy and visits you for an opinion as to his best options for therapy.  Your visit suggests that she is a very active and healthy woman with a 40 pack year smoking history but no clinically notable cardiac or pulmonary history.  A quick consultation with your hepatic surgeon confirms your suspicion that she is not and never will be an operable candidate. Further pathologic evaluation reveals that her tumor is MSS and contains a glycine to arginine mutation in RAS codon 12.  </p>
+
+			<p>At this point, do you suggest systemic intervention using chemotherapy plus bevacizumab?</p>
+			
+			<p><input type="radio" name="1" value="Yes"> Yes</p>
+			<p><input type="radio" name="1" value="No"> No</p>
+
+			<p>What do you select for your initial systemic chemotherapy?</p>
+
+			<p><input type="radio" name="2" value="FOLFOX"> FOLFOX </p>
+			<p><input type="radio" name="2" value="CAPOX"> CAPOX</p> 
+			<p><input type="radio" name="2" value="FOLFIRI"> FOLFIRI</p> 
+			<p><input type="radio" name="2" value="FOLFOXIRI"> FOLFOXIRI</p> 
+			<p><input type="radio" name="2" value="Irinotecan"> Irinotecan</p>
+			<p><input type="radio" name="2" value="Capecitabine"> Capecitabine</p>
+			<p><input type="radio" name="2" value="5-FU/leucovorin"> 5-FU/leucovorin</p>
+			
+			<p>If our patient’s tumor had a mutation in her RAF gene rather than RAS, would this change your choice of chemotherapy?</p>
+
+			<p><input type="radio" name="3" value="Yes"> Yes</p>
+			<p><input type="radio" name="3" value="No"> No</p>
+			<p><input type="radio" name="3" value="Not sure"> Not sure</p>
+
+			<p>You decide to initiate therapy with FOLFOX plus bevacizumab and she achieves a solid partial response with shrinkage in both her lung and hepatic lesions.  After 4 months of therapy you are forced to discontinue oxaliplatin for substantial neuropathy that interfere with email and texting.  What is your strategy at this point?</p>
+
+			<p><input type="radio" name="4" value="Continue with FU/L plus bev"> Continue with FU/L plus bev</p>
+			<p><input type="radio" name="4" value="Continue with FU/L"> Continue with FU/L</p>
+			<p><input type="radio" name="4" value="Continue with bev only"> Continue with bev only</p>
+			<p><input type="radio" name="4" value="Switch to FOLFIRI"> Switch to FOLFIRI</p> 
+			<p><input type="radio" name="4" value="Switch to FOLFIRI + bev"> Switch to FOLFIRI + bev</p>
+			<p><input type="radio" name="4" value="Switch to irinotecan alone"> Switch to irinotecan alone</p>
+			<p><input type="radio" name="4" value="Switch to irinotecan + bev"> Switch to irinotecan + bev</p>
+
+			<p>You elected to continue therapy with FU/L plus bev but after 4 additional months of this therapy, several small new lung lesions appear and her preexisting lung and hepatic disease progresses modestly.  She still has persistent neuropathy.  At this point you suggest altering therapy to which of the following:</p>
+
+			<p><input type="radio" name="5" value="FOLFIRI"> FOLFIRI</p>
+			<p><input type="radio" name="5" value="FOLFIRI + bev"> FOLFIRI + bev</p>
+			<p><input type="radio" name="5" value="Irinotecan + bev"> Irinotecan + bev</p>
+			<p><input type="radio" name="5" value="Irinotecan alone"> Irinotecan alone</p>
+			<p><input type="radio" name="5" value="Capecitabine + bev"> Capecitabine + bev</p>
+			<p><input type="radio" name="5" value="Capecitabine"> Capecitabine</p>
+			<p><input type="radio" name="5" value="Chemotherapy + an alternative VEGF inhibitor"> Chemotherapy + an alternative VEGF inhibitor</p>
+			
+			<p>If our patient’s tumor did not contain a RAS mutation, would you use an EGFR inhibitor at this point rather than additional therapy with anti-VEGF therapy?</p>
+
+			<p><input type="radio" name="6" value="Yes"> Yes</p>
+			<p><input type="radio" name="6" value="No"> No</p>
+			<p><input type="radio" name="6" value="Not sure"> Not sure</p>
+			
+		</div>
+	</div>
+	
 	<!-- <a class="nav" id="prev" onclick="gallery.prev()">previous</a>
 		<a class="nav" id="next" onclick="gallery.next()">next</a> -->
+<script type="text/javascript" charset="utf-8">
+	$('#survey').modal({
+		backdrop: true,
+	  keyboard: true
+	})
+	$('#survey').bind('shown', function () {
+		  setTimeout(function () {
+					myScroll.refresh();
+				}, 0);
+	})
+	$('a.closemodal').click(function() {
+			   var qqq = $(this).closest('.modal');
+			   $(qqq).modal('hide');
+	});
+</script>
 	
 <script type="text/javascript">
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
@@ -45,8 +117,9 @@ var	gallery,
 				tex: "<p>The available platforms for medical educational programming are producing a lot of content, but without the right context; for meaningful solutions to patient care, for changing clinical practice to keep up with the latest advances in therapy, and for dynamic peer-to-peer clinical exchange.</p>"
 			},
 			{
-				cont: '<h2>Enter the mobile web.</h2>',
-				tex: '<p>Clinical Consensus provides the appropriate context by sending specific cases to doctors by text message and email. The case is provided with a survey of questions. <a href="#survey"><em>View an example survey</em>.</a></p>'
+				cont: '<h2>Enter the mobile web.</h2>\
+				<a href="#survey" data-controls-modal="survey"><%= image_tag "text.png", :title => "Text Bubble", :class => "text" %></a>',
+				tex: '<p>Clinical Consensus provides the appropriate context by sending specific cases to doctors by text message and email. The case is provided with a survey of questions. <a href="#survey" data-controls-modal="survey"><em>View an example case.</em></a></p>'
 			},
 			{
 				cont: '<img src="communication.png" alt="Communication">',
@@ -66,20 +139,20 @@ var	gallery,
 			},
 			{
 				cont: '<h2>...and video.</h2>\
-				<video width="270" height="160" controls="controls">\
+				<video controls="controls">\
 				  <source src="kolsample.mp4" type="video/mp4" />\
 				  Your browser does not support the video tag.\
 				</video>',
 				tex: '<p></p>'
 			},
 			{
-				cont: '<h2>Medical education meets the modern era.</h2>',
-				tex: '<p>Please engage with us on this great opportunity.</p>'
+				cont: '<h2>Medical education meets<br />the modern era.</h2>',
+				tex: '<p>Please engage with us on this great opportunity.</p>\
+				<footer><p>Part of <%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></p></footer>'
 			}
 	];
 
-gallery = new SwipeView('#wrapper', { numberOfPages: slides.length,
-	 																		loop: false });
+gallery = new SwipeView('#wrapper', { numberOfPages: slides.length });
 
 // Load initial data
 for (i=0; i<3; i++) {
