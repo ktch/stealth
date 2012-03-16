@@ -7,14 +7,54 @@ $yellow: #f5e201;
 	
 	a {
 		color:$orange;
+		cursor: hand;
+		cursor: pointer;
+	}
+	
+	a.btn {
+		color:#fff;
+		padding:0 10px -5px 10px;
 	}
 	
 	p {
 		margin:4px 15px 4px 15px;
 		font-size:16px;
 		line-height:19px;
+		max-width:800px;
 		@media screen and (min-width:481px) {
 				font-size:25px;
+				line-height:32px;
+		}
+	}
+	
+	p.answer {
+		font-weight:bold;
+	}
+	
+	.leftside {
+		@media screen and (min-width:481px) {
+			float:left;
+			width:50%;
+		}
+	}
+	
+	img.results {
+		width:175px;
+		margin-bottom:-40px;
+		margin-left:120px;
+		@media screen and (min-width:481px) {
+			float:left;
+			width:300px;
+			margin-left:15px;
+			margin-top:-100px;
+			margin-bottom:0;
+		}
+	}
+	
+	img.closinglogo {
+		width:200px;
+		@media screen and (min-width:481px) {
+			width:400px;
 		}
 	}
 
@@ -46,6 +86,21 @@ $yellow: #f5e201;
 	
 	img.text {
 		width:200px;
+		@media screen and (min-width:481px) {
+				width:33%;
+				margin-top:25px;
+		}
+	}
+	
+	img.barchart {
+		width:290px;
+		height:100px;
+		margin-left:12px;
+		@media screen and (min-width:481px) {
+				width:90%;
+				height:50%;
+				margin-top:25px;
+		}
 	}
 	
 	footer {
@@ -158,6 +213,43 @@ $yellow: #f5e201;
 		opacity:1;
 	}
 	
+	.comeback {
+		z-index:100;
+		opacity:0;
+		-webkit-transition:opacity 2.1s linear;
+		-webkit-transition-delay:6s;
+		text-align:center;
+	}
+	
+	h2.comeback {
+		margin-left:-15px;
+		margin-top:-35px;
+		@media screen and (min-width:481px) {
+			margin-top:-100px;
+		}
+	}
+	
+	#swipeview-slider .swipeview-active h2.comeback {
+		opacity:1;
+	}
+	
+	.goaway {
+		opacity: 1;
+		-webkit-transition:opacity 1.5s linear;
+		-webkit-transition-delay:4s;
+	}
+	
+	p.goaway{
+		margin-top:-80px;
+		@media screen and (min-width:481px) {
+			margin-top:-150px;
+		}
+	}
+	
+	#swipeview-slider .swipeview-active p.goaway, #swipeview-slider .swipeview-active h2.goaway {
+		opacity:0;
+	}
+	
 	#survey {
 		height:290px;
 		width:280px;
@@ -177,6 +269,11 @@ $yellow: #f5e201;
 			position:absolute;
 			top:0;
 			right:0;
+		}
+		@media screen and (min-width:481px) {
+			height:600px;
+			width:600px;
+			margin:-340px 0px 0px -300px;
 		}
 	}
 
