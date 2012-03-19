@@ -9,8 +9,8 @@
 		<li onclick="gallery.goToPage(6)"></li>
 		<li onclick="gallery.goToPage(7)"></li>
 		<li onclick="gallery.goToPage(8)"></li>
-		<!-- <li onclick="gallery.goToPage(9)"></li>
-				<li onclick="gallery.goToPage(10)"></li> -->
+		<li onclick="gallery.goToPage(9)"></li>
+		<!-- <li onclick="gallery.goToPage(10)"></li> -->
 	</ul>
 	
 	<nav>
@@ -103,54 +103,64 @@ var	gallery,
 	dots = document.querySelectorAll('#nav li'),
 	slides = [
 			{
-				cont: '<%= image_tag "consensuslogo.png", :title => "Clinical Consensus", :class => "frontlogo" %>',
-				tex: '<p>Physicians’ don’t process <strong>content</strong> — they process <strong>context</strong>.</p>\
-				<p><em>Please swipe to the next frame ⇢</em></p>\
-				<footer><p>Part of <%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></p></footer>'
+				cont: '<h2 class="typewriter">Medical education: smarter</h2>\
+				<%= image_tag "consensuslogo.png", :title => "Clinical Consensus", :class => "frontlogo" %>',
+				tex: '<p>The first context-based information channel designed to effectively communicate with physicians in the manner they demand.</p>\
+				<p class="swipemessage"><em>Please swipe to the next frame ⇢</em></p>\
+				<footer><p><%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></p></footer>'
 			},
 			{
-				cont: '<h2>Words are important.</h2>',
-				tex: '<p>But research shows that effective communication has less to do with content and more to do with the context in which content is delivered.</p>'
+				cont: '<h2>Words and data are important…</h2>',
+				tex: '<p>But research shows that <strong>effective communication</strong> has less to do with content, and more to do with the <strong>context</strong> in which that <strong>content is delivered</strong>.</p>'
 			},
 			{
-				cont: '<h2>The environment is noisy.</h2>',
-				tex: "<p>The available platforms for medical educational programming are producing a lot of content, but without the right context; for meaningful solutions to patient care, for changing clinical practice to keep up with the latest advances in therapy, and for dynamic peer-to-peer clinical exchange.</p>"
+				cont: '<h2 class="noisy">The environment is noisy.</h2>\
+				<p class="buzz">The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable.</p>',
+				tex: '<p class="noisy">Clinical Consensus provides its community of physicians:</p>\
+				<ul class="noisy"><li>New and meaningful solutions for patient care</li>\
+				<li>The most current advances in therapy for clinical practice</li>\
+				<li>Direct contact with highly-respected, key opinion leaders</li>\
+				<li>Dynamic peer to peer information exchange</li></ul>\
+				<p class="noisy"><em>Delivered in the format and medium they desire.</em></p>'
 			},
 			{
-				cont: '<h2>Enter the mobile web.</h2>',
-				tex: '<p>Clinical Consensus provides the appropriate context by sending specific cases to doctors by text message and email. The case is provided with a survey of questions. <a href="#survey" data-controls-modal="survey"><em>View an example case.</em></a></p>\
-				<a href="#survey" data-controls-modal="survey"><%= image_tag "text.png", :title => "Text Bubble", :class => "text" %></a>'
+				cont: '<h2 class="typewriter">Healthcare and mobile technology: A perfect match</h2>',
+				tex: '<p>Combining the speed and dependability of text messaging, the comfort of email, and cutting-edge, responsive web design technology, Clinical Consensus delivers <strong>context-based information</strong> to physicians, a <strong>dynamic medium for professional exchange</strong>, and <strong>expert analysis</strong> from highly-respected key opinion leaders in an <strong>engaging format</strong> – on <em>any</em> Internet enabled device.</p>'
 			},
 			{
-				cont: '<%= image_tag "barchart.png", :title => "Bar Chart", :class => "barchart" %>',
-				tex: '<p>As the survey results are evaluated, physicians have the opportunity to bring up questions, to interface with key opinion leaders, and to discuss the case with one another on private discussion boards.</p>'
+				cont: '<h2 class="leftside">Opportunity</h2>',
+				tex: '<p class="leftside">Valuable curated content and treatment options are presented to and evaluated by peer physicians in a thought-provoking format.  Responses from the community are delivered instantly…</p>'
 			},
 			{
-				cont: '<h2 class="leftside">Results</h2>',
-				tex: '<p class="leftside">At the end of the case, the key opinion leader publishes the results and shares data, solutions, and expert knowledge, which is delivered to participating physicians by email or text message.</p>\
-				<%= image_tag "results.jpg", :title => "Results", :class => "results" %>'
+				cont: '<h2 class="leftside">Community</h2>\
+				<%= image_tag "barchart.png", :title => "Bar Chart", :class => "barchart" %>',
+				tex: '<p class="leftside">allowing physicians to compare their responses with those of their peers.</p>'
 			},
 			{
-				cont: '<h2>Accompanied by audio...</h2>\
+				cont: '<h2>Results</h2>',
+				tex: '<p>Data is collated, and solutions are then shared within the community, along with insightful analysis from key opinion leaders, in a variety of engaging formats, like audio</p>\
 				<audio controls="controls">\
-				<source src="caseexample.m4a" type="audio/mp3" />\
-				Your browser does not support the audio element.\
-				</audio>',
-				tex: '<p><em>You can listen to the sample above.</em></p>'
-			},
-			{
-				cont: '<h2>...and video.</h2>\
+					<source src="caseexample.m4a" type="audio/mp3" />\
+					Your browser does not support the audio element.\
+				</audio>\
+				<p>and video.</p>\
 				<video controls="controls">\
-				  <source src="kolsample.mp4" type="video/mp4" />\
-				  Your browser does not support the video tag.\
-				</video>',
-				tex: '<p></p>'
+					<source src="kolsample.mp4" type="video/mp4" />\
+					Your browser does not support the video tag.\
+				</video>'
 			},
 			{
-				cont: '<h2 class="goaway">Medical education meets<br />the modern era.</h2>\
+				cont: '<h2>Resources</h2>',
+				tex: '<p>Clinical Consensus continuously engages the physician community by providing them access to the most current information, <strong>anytime</strong>, <strong>anywhere</strong> on <strong>ANY device</strong> .</p>'
+			},
+			{
+				cont: '<%= image_tag "connections.png", :title => "Connections", :class => "connections" %><h2>Connectivity</h2>',
+				tex: '<p>Physicians from around the country are connected with key opinion leaders and given the opportunity to ask questions, discuss a case with peers, and pose real world case studies for future evaluation.</p>'
+			},
+			{
+				cont: '<h2 class="goaway">Timely and effective communication, always in context.</h2>\
 				<h2 class="comeback">Contact<br /><%= image_tag "nsitelogo.png", :title => "N*Site", :class => "closinglogo" %><br /><a href="tel:2055551212">205-555-1212</a></h2>',
-				tex: '<p class="goaway">Please engage with us on this great opportunity.</p>\
-				<footer><p>Part of <%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></p></footer>'
+				tex: '<footer><p><%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></p></footer>'
 			}
 	];
 
@@ -202,3 +212,12 @@ gallery.onMoveIn(function () {
 });
 
 </script>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		if ($('#swipeview-slider .swipeview-active h2.typewriter').length ) {
+		   $('#swipeview-slider .swipeview-active h2.typewriter').jTypeWriter();
+		}
+	});
+</script>
+

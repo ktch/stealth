@@ -70,7 +70,7 @@ $yellow: #f5e201;
 	
 	img.frontlogo {
 		width:90%;
-		margin:-20px 10px 0 10px;
+		margin:15px 10px -7px 10px;
 		@media screen and (min-width:321px) {
 				width:75%;
 		}
@@ -79,9 +79,69 @@ $yellow: #f5e201;
 		}
 	}
 	
+	aside ul {
+		margin-bottom:5px;
+		@media screen and (min-width:481px) {
+						margin-bottom:15px;
+				}
+	}
+	
+	aside ul li {
+		margin-left:15px;
+		margin-top:5px;
+		font-size:13px;
+		@media screen and (min-width:481px) {
+				font-size:25px;
+				margin-left:35px;
+				margin-top:13px;
+		}
+	}
+	
+	p.swipemessage {
+		position:absolute;
+		bottom:60px;
+		right:15px;
+		opacity:0;
+		-webkit-transition:opacity 1.5s linear;
+		-webkit-transition-delay:1.3s;
+	}
+	
+	#swipeview-slider .swipeview-active p.swipemessage {
+		opacity:1;
+	}
+	
 	img.sentencelogo {
 		height:25px;
 		margin-bottom:-3px;
+	}
+	
+	p.buzz {
+		opacity:1;
+		position:absolute;
+		font-weight:bold;
+		font-size:18px;
+		top:-10px;
+		left:-15px;
+		width:2000px;
+		margin:-100px;
+		padding-right:-1000px;
+		color:#999;
+		-webkit-transition:opacity 2.5s linear;
+		-webkit-transition-delay:1.5s;
+	}
+	
+	#swipeview-slider .swipeview-active p.buzz {
+		opacity:0;
+	}
+	
+	.noisy {
+		opacity:0;
+		-webkit-transition:opacity 2.5s linear;
+		-webkit-transition-delay:2s;
+	}
+	
+	#swipeview-slider .swipeview-active .noisy {
+		opacity:1;
 	}
 	
 	img.text {
@@ -92,23 +152,34 @@ $yellow: #f5e201;
 		}
 	}
 	
-	img.barchart {
-		width:290px;
+	img.connections {
 		height:100px;
 		margin-left:12px;
 		@media screen and (min-width:481px) {
-				width:90%;
 				height:50%;
 				margin-top:25px;
 		}
 	}
 	
+	img.barchart {
+		height:100px;
+		width:290px;
+		margin-left:12px;
+		margin-top:15px;
+		@media screen and (min-width:481px) {
+				height:50%;
+				width:90%;
+				margin-top:25px;
+		}
+	}
+	
 	footer {
+		border-top:none;
 		position:absolute;
-		width:262px;
+		width:228px;
 		left:50%;
 		bottom:11px;
-		margin-left:-131px;
+		margin-left:-108px;
 		p {
 			font-size:12px;
 		}
@@ -116,12 +187,12 @@ $yellow: #f5e201;
 	
 	video {
 		margin-left:15px;
-		width:90%;
+		width:50%;
 	}
 	
 	audio {
-		margin-left:15px;
-		margin-top:20px;
+		margin-left:5px;
+		margin-top:13px;
 	}
 
 	#wrapper {
@@ -134,11 +205,11 @@ $yellow: #f5e201;
 		position:absolute;
 		z-index:100;
 		top:10px;
-		width:250px;
+		width:260px;
 		height:15px;
 		left:50%;
 		padding:2px 2px 2px 7px;
-		margin:0 0 0 -125px;
+		margin:0 0 0 -130px;
 		@include rounded(20px);
 	}
 
@@ -167,11 +238,13 @@ $yellow: #f5e201;
 			position:absolute;
 			color:$orange;
 			left:7px;
+			text-decoration:none;
 		}
 		a#next {
 			position:absolute;
 			color:$orange;
 			right:7px;
+			text-decoration:none;
 		}
 	}
 	
