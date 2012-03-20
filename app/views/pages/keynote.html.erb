@@ -28,7 +28,7 @@
 			
 			<p class="answer"><input type="radio" name="1" value="Yes"> Yes <input type="radio" name="1" value="No"> No</p>
 			
-		<a class="btn danger closemodal closesurvey" data-dismiss="modal" href="#survey">Answer</a>
+		<a class="btn danger closemodal closesurvey" data-dismiss="modal" href="#survey">Submit</a>
 			
 		</div>
 	</div>
@@ -66,7 +66,7 @@ var	gallery,
 			},
 			{
 				cont: '<h2>Words and data are important…</h2>',
-				tex: '<p>But research shows that <strong>effective communication</strong> has less to do with content, and more to do with the <strong>context</strong> in which that <strong>content is delivered</strong>.</p>'
+				tex: '<p>But research shows that <strong>effective communication</strong> has less to do with content, and more to do with the <strong>context</strong> in which that <strong>content</strong> is delivered.</p>'
 			},
 			{
 				cont: '<h2 class="noisy">The environment is noisy.</h2>\
@@ -76,21 +76,24 @@ var	gallery,
 				<li>The most current advances in clinical practice</li>\
 				<li>Direct contact with key opinion leaders</li>\
 				<li>Dynamic peer to peer information exchange</li></ul>\
-				<p class="noisy"><em>Delivered in the format and medium they desire.</em></p>'
+				<p class="noisy">Delivered in the format and medium they desire.</p>'
 			},
 			{
 				cont: '<h2 class="typewriter">Healthcare and mobile technology: A perfect match</h2>',
-				tex: '<p>Combining the speed of text messaging, the comfort of email, and cutting-edge, responsive web design, Clinical Consensus delivers <strong>contextual information</strong> to physicians, a <strong>dynamic medium for professional exchange</strong>, and <strong>expert analysis</strong> from respected key opinion leaders in an <strong>engaging format</strong> – on <em>any</em> web-enabled device. <a onclick="gallery.next()"><em>Here\'s how it works ⇢</em></a></p>'
+				tex: '<p>Utilizing text messaging, email and cutting edge responsive web design, Clinical Consensus delivers <strong>contextual information</strong> in a <strong>dynamic medium</strong> for professional exchange, with <strong>expert analysis</strong> from respected key opinion leaders – on <em>any</em> web-enabled device.</p>\
+				<p><a onclick="gallery.next()"><em>Here\'s how it works. ⇢</em></a></p>'
 			},
 			{
-				cont: '<h2 class="leftside">Opportunity</h2>',
-				tex: '<p class="leftside">Valuable curated content and treatment options are presented to and evaluated by peer physicians in a thought-provoking format.  Responses from the community are delivered instantly…</p>\
-				<p><a href="#survey" data-controls-modal="survey"><em>View an example</em></a></p>'
+				cont: '',
+				tex: '<h2 class="leftsidetop">Opportunity</h2>\
+				<p class="leftside">Valuable curated content and treatment options are presented to and evaluated by peer physicians in a thought-provoking format.</p>\
+				<p class="leftside"><a href="#survey" data-controls-modal="survey"><em>View an example</em></a></p>\
+				<p><a href="#survey" data-controls-modal="survey"><%= image_tag "iphonesurvey.png", :title => "Survey on iPhone", :class => "rightside" %></a></p>'
 			},
 			{
 				cont: '<h2 class="leftside">Community</h2>',
-				tex: '<p class="leftside">allowing physicians to compare their responses with those of their peers.</p>\
-				<div id="chartdiv" style="width: 100%; height: 200px;"></div>'
+				tex: '<p class="leftside">Responses from the community are delivered instantly, allowing physicians to compare their responses with those of their peers.</p>\
+				<div id="chartdiv" style="width: 100%; height: 100px;"></div>'
 			},
 			{
 				cont: '<h2>Results</h2>',
@@ -107,15 +110,17 @@ var	gallery,
 			},
 			{
 				cont: '<h2>Resources</h2>',
-				tex: '<p>Clinical Consensus continuously engages the physician community by providing them access to the most current information, <strong>anytime</strong>, <strong>anywhere</strong> on <strong>ANY device</strong> .</p>'
+				tex: '<p>Clinical Consensus continuously engages the physician community by providing them access to the most current information, <strong>anytime</strong>, <strong>anywhere</strong> on <strong><em>any</em> device</strong>.</p>\
+				<p><%= image_tag "ipad.png", :title => "iPad Consensus", :class => "ipad" %></p>'
 			},
 			{
-				cont: '<%= image_tag "connections.png", :title => "Connections", :class => "connections" %><h2>Connectivity</h2>',
-				tex: '<p>Physicians from around the country are connected with key opinion leaders and given the opportunity to ask questions, discuss a case with peers, and pose real world case studies for future evaluation.</p>'
+				cont: '<h2>Connectivity</h2>',
+				tex: '<p>Physicians from around the country are connected with key opinion leaders and given the opportunity to ask questions, discuss a case with peers, and pose real world case studies for future evaluation.</p>\
+				<p><%= image_tag "connections.png", :title => "Connections", :class => "connections" %></p>'
 			},
 			{
 				cont: '<h2 class="goaway">Timely and effective communication, always in context.</h2>\
-				<h2 class="comeback">Contact<br /><%= image_tag "nsitelogo.png", :title => "N*Site", :class => "closinglogo" %><br /><a href="tel:858-243-5930">858-243-5930</a></h2>',
+				<h2 class="comeback">Contact<br /><%= image_tag "nsitelogo.png", :title => "N*Site", :class => "closinglogo" %><br /><a href="tel:858-243-5930">858-243-5930</a></h2><p class="comeback">Text NSite to 99699</p>',
 				tex: '<footer><p><a href="http://mobilezen.com/nsite"><%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></a></p></footer>'
 			}
 	];
