@@ -5,12 +5,8 @@ $yellow: #f5e201;
 
 #pages_controller {
 	
-	text {
+	text, rect {
 		display:none;
-	}
-	
-	g {
-		height:20px;
 	}
 	
 	a {
@@ -345,8 +341,9 @@ $yellow: #f5e201;
 		margin-top:25px;
 		margin-left:0px;
 		@media screen and (min-width:481px) {
-			margin-top:50px;
-			margin-left:65px;
+			display:block;
+			width:400px;
+			margin:10px auto;
 		}
 	}
 	
