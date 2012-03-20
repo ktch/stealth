@@ -6,7 +6,7 @@
 		<li onclick="gallery.goToPage(3)"></li>
 		<li onclick="gallery.goToPage(4)"></li>
 		<li onclick="gallery.goToPage(5)"></li>
-		<li onclick="gallery.goToPage(6)"></li>
+		<li onclick="gallery.goToPage(6);"></li>
 		<li onclick="gallery.goToPage(7)"></li>
 		<li onclick="gallery.goToPage(8)"></li>
 		<li onclick="gallery.goToPage(9)"></li>
@@ -20,77 +20,32 @@
 	
 	<div id="survey" class="modal hide fade">
 		<div id="scrollcontainer">
-		<h2>Case Example</h2><a class="btn danger closemodal closesurvey" data-dismiss="modal" href="#survey">Close</a>
-			
+		<h2>Case Example</h2>			
 
-			<p>A 63 YO congressman developed severe DOE while skiing in Colorado and was found to have a Hgb of 7.4.  Colonoscopy revealed a nearly obstructing fungating mass at 50 cm that was biopsy positive for a moderately differentiated mucinous adenocarcinoma.  A CT scan showed mild emphysematous changes in her lungs and a single 1.5 cm RLL nodule along with at least 5 hepatic metastases with the largest measuring 3.4 cm involving the portal vein.  She is recovering from his laparoscopic left hemicolectomy and visits you for an opinion as to his best options for therapy.  Your visit suggests that she is a very active and healthy woman with a 40 pack year smoking history but no clinically notable cardiac or pulmonary history.  A quick consultation with your hepatic surgeon confirms your suspicion that she is not and never will be an operable candidate. Further pathologic evaluation reveals that her tumor is MSS and contains a glycine to arginine mutation in RAS codon 12.  </p>
+			<p>A 63 YO congressman developed severe DOE while skiing in Colorado and was found to have a Hgb of 7.4. Colonoscopy revealed a nearly obstructing fungating mass at 50 cm that was biopsy positive for a moderately differentiated mucinous adenocarcinoma. A CT scan showed mild emphysematous changes in her lungs and a single 1.5 cm RLL nodule along with at least 5 hepatic metastases with the largest measuring 3.4 cm involving the portal vein. Further pathologic evaluation reveals that her tumor is MSS and contains a glycine to arginine mutation in RAS codon 12.</p>
 
 			<p>At this point, do you suggest systemic intervention using chemotherapy plus bevacizumab?</p>
 			
-			<p class="answer"><input type="radio" name="1" value="Yes"> Yes</p>
-			<p class="answer"><input type="radio" name="1" value="No"> No</p>
-
-			<p>What do you select for your initial systemic chemotherapy?</p>
-
-			<p class="answer"><input type="radio" name="2" value="FOLFOX"> FOLFOX </p>
-			<p class="answer"><input type="radio" name="2" value="CAPOX"> CAPOX</p> 
-			<p class="answer"><input type="radio" name="2" value="FOLFIRI"> FOLFIRI</p> 
-			<p class="answer"><input type="radio" name="2" value="FOLFOXIRI"> FOLFOXIRI</p> 
-			<p class="answer"><input type="radio" name="2" value="Irinotecan"> Irinotecan</p>
-			<p class="answer"><input type="radio" name="2" value="Capecitabine"> Capecitabine</p>
-			<p class="answer"><input type="radio" name="2" value="5-FU/leucovorin"> 5-FU/leucovorin</p>
+			<p class="answer"><input type="radio" name="1" value="Yes"> Yes <input type="radio" name="1" value="No"> No</p>
 			
-			<p>If our patient’s tumor had a mutation in her RAF gene rather than RAS, would this change your choice of chemotherapy?</p>
-
-			<p class="answer"><input type="radio" name="3" value="Yes"> Yes</p>
-			<p class="answer"><input type="radio" name="3" value="No"> No</p>
-			<p class="answer"><input type="radio" name="3" value="Not sure"> Not sure</p>
-
-			<p>You decide to initiate therapy with FOLFOX plus bevacizumab and she achieves a solid partial response with shrinkage in both her lung and hepatic lesions.  After 4 months of therapy you are forced to discontinue oxaliplatin for substantial neuropathy that interfere with email and texting.  What is your strategy at this point?</p>
-
-			<p class="answer"><input type="radio" name="4" value="Continue with FU/L plus bev"> Continue with FU/L plus bev</p>
-			<p class="answer"><input type="radio" name="4" value="Continue with FU/L"> Continue with FU/L</p>
-			<p class="answer"><input type="radio" name="4" value="Continue with bev only"> Continue with bev only</p>
-			<p class="answer"><input type="radio" name="4" value="Switch to FOLFIRI"> Switch to FOLFIRI</p> 
-			<p class="answer"><input type="radio" name="4" value="Switch to FOLFIRI + bev"> Switch to FOLFIRI + bev</p>
-			<p class="answer"><input type="radio" name="4" value="Switch to irinotecan alone"> Switch to irinotecan alone</p>
-			<p class="answer"><input type="radio" name="4" value="Switch to irinotecan + bev"> Switch to irinotecan + bev</p>
-
-			<p>You elected to continue therapy with FU/L plus bev but after 4 additional months of this therapy, several small new lung lesions appear and her preexisting lung and hepatic disease progresses modestly.  She still has persistent neuropathy.  At this point you suggest altering therapy to which of the following:</p>
-
-			<p class="answer"><input type="radio" name="5" value="FOLFIRI"> FOLFIRI</p>
-			<p class="answer"><input type="radio" name="5" value="FOLFIRI + bev"> FOLFIRI + bev</p>
-			<p class="answer"><input type="radio" name="5" value="Irinotecan + bev"> Irinotecan + bev</p>
-			<p class="answer"><input type="radio" name="5" value="Irinotecan alone"> Irinotecan alone</p>
-			<p class="answer"><input type="radio" name="5" value="Capecitabine + bev"> Capecitabine + bev</p>
-			<p class="answer"><input type="radio" name="5" value="Capecitabine"> Capecitabine</p>
-			<p class="answer"><input type="radio" name="5" value="Chemotherapy + an alternative VEGF inhibitor"> Chemotherapy + an alternative VEGF inhibitor</p>
-			
-			<p>If our patient’s tumor did not contain a RAS mutation, would you use an EGFR inhibitor at this point rather than additional therapy with anti-VEGF therapy?</p>
-
-			<p class="answer"><input type="radio" name="6" value="Yes"> Yes</p>
-			<p class="answer"><input type="radio" name="6" value="No"> No</p>
-			<p class="answer"><input type="radio" name="6" value="Not sure"> Not sure</p>
+		<a class="btn danger closemodal closesurvey" data-dismiss="modal" href="#survey">Answer</a>
 			
 		</div>
 	</div>
-	
-	<!-- <a class="nav" id="prev" onclick="gallery.prev()">previous</a>
-		<a class="nav" id="next" onclick="gallery.next()">next</a> -->
+
 <script type="text/javascript" charset="utf-8">
 	$('#survey').modal({
 		backdrop: true,
 	  keyboard: true
 	})
-	$('#survey').bind('shown', function () {
-		  setTimeout(function () {
-					myScroll.refresh();
-				}, 0);
-	})
 	$('a.closemodal').click(function() {
 			   var qqq = $(this).closest('.modal');
 			   $(qqq).modal('hide');
 	});
+	$('#survey').on('hidden', function () {
+	  gallery.next();
+		chart.write("chartdiv");
+	})
 </script>
 	
 <script type="text/javascript">
@@ -107,7 +62,7 @@ var	gallery,
 				<%= image_tag "consensuslogo.png", :title => "Clinical Consensus", :class => "frontlogo" %>',
 				tex: '<p>The first context-based information channel designed to effectively communicate with physicians in the manner they demand.</p>\
 				<p class="swipemessage"><em>Please swipe to the next frame ⇢</em></p>\
-				<footer><p><%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></p></footer>'
+				<footer><p><a href="http://mobilezen.com/nsite"><%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></p></a></footer>'
 			},
 			{
 				cont: '<h2>Words and data are important…</h2>',
@@ -118,23 +73,24 @@ var	gallery,
 				<p class="buzz">The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable.</p>',
 				tex: '<p class="noisy">Clinical Consensus provides its community of physicians:</p>\
 				<ul class="noisy"><li>New and meaningful solutions for patient care</li>\
-				<li>The most current advances in therapy for clinical practice</li>\
-				<li>Direct contact with highly-respected, key opinion leaders</li>\
+				<li>The most current advances in clinical practice</li>\
+				<li>Direct contact with key opinion leaders</li>\
 				<li>Dynamic peer to peer information exchange</li></ul>\
 				<p class="noisy"><em>Delivered in the format and medium they desire.</em></p>'
 			},
 			{
 				cont: '<h2 class="typewriter">Healthcare and mobile technology: A perfect match</h2>',
-				tex: '<p>Combining the speed and dependability of text messaging, the comfort of email, and cutting-edge, responsive web design technology, Clinical Consensus delivers <strong>context-based information</strong> to physicians, a <strong>dynamic medium for professional exchange</strong>, and <strong>expert analysis</strong> from highly-respected key opinion leaders in an <strong>engaging format</strong> – on <em>any</em> Internet enabled device.</p>'
+				tex: '<p>Combining the speed of text messaging, the comfort of email, and cutting-edge, responsive web design, Clinical Consensus delivers <strong>contextual information</strong> to physicians, a <strong>dynamic medium for professional exchange</strong>, and <strong>expert analysis</strong> from respected key opinion leaders in an <strong>engaging format</strong> – on <em>any</em> web-enabled device. <a onclick="gallery.next()"><em>Here\'s how it works ⇢</em></a></p>'
 			},
 			{
 				cont: '<h2 class="leftside">Opportunity</h2>',
-				tex: '<p class="leftside">Valuable curated content and treatment options are presented to and evaluated by peer physicians in a thought-provoking format.  Responses from the community are delivered instantly…</p>'
+				tex: '<p class="leftside">Valuable curated content and treatment options are presented to and evaluated by peer physicians in a thought-provoking format.  Responses from the community are delivered instantly…</p>\
+				<p><a href="#survey" data-controls-modal="survey"><em>View an example</em></a></p>'
 			},
 			{
-				cont: '<h2 class="leftside">Community</h2>\
-				<%= image_tag "barchart.png", :title => "Bar Chart", :class => "barchart" %>',
-				tex: '<p class="leftside">allowing physicians to compare their responses with those of their peers.</p>'
+				cont: '<h2 class="leftside">Community</h2>',
+				tex: '<p class="leftside">allowing physicians to compare their responses with those of their peers.</p>\
+				<div id="chartdiv" style="width: 100%; height: 200px;"></div>'
 			},
 			{
 				cont: '<h2>Results</h2>',
@@ -159,8 +115,8 @@ var	gallery,
 			},
 			{
 				cont: '<h2 class="goaway">Timely and effective communication, always in context.</h2>\
-				<h2 class="comeback">Contact<br /><%= image_tag "nsitelogo.png", :title => "N*Site", :class => "closinglogo" %><br /><a href="tel:2055551212">205-555-1212</a></h2>',
-				tex: '<footer><p><%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></p></footer>'
+				<h2 class="comeback">Contact<br /><%= image_tag "nsitelogo.png", :title => "N*Site", :class => "closinglogo" %><br /><a href="tel:858-243-5930">858-243-5930</a></h2>',
+				tex: '<footer><p><a href="http://mobilezen.com/nsite"><%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></a></p></footer>'
 			}
 	];
 
@@ -221,3 +177,68 @@ gallery.onMoveIn(function () {
 	});
 </script>
 
+<script type="text/javascript">
+            var chart;
+
+            var chartData = [{
+                year: 2006,
+                income: 26.2,
+                expenses: 22.8
+            }, {
+                year: 2007,
+                income: 30.1,
+                expenses: 23.9
+            }];
+
+
+            AmCharts.ready(function () {
+                // SERIAL CHART
+                chart = new AmCharts.AmSerialChart();
+                chart.dataProvider = chartData;
+                chart.categoryField = "year";
+                chart.startDuration = 1;
+                chart.plotAreaBorderColor = "#DADADA";
+                chart.plotAreaBorderAlpha = 1;
+                chart.marginBottom = 10;
+                // this single line makes the chart a bar chart          
+                chart.rotate = true;
+
+                // AXES
+                // Category
+                var categoryAxis = chart.categoryAxis;
+                categoryAxis.gridPosition = "start";
+                categoryAxis.gridAlpha = 0.1;
+                categoryAxis.axisAlpha = 0;
+
+                // Value
+                var valueAxis = new AmCharts.ValueAxis();
+                valueAxis.axisAlpha = 0;
+                valueAxis.gridAlpha = 0.1;
+                valueAxis.position = "top";
+                valueAxis.tickLength = 0;
+                chart.addValueAxis(valueAxis);
+
+                // GRAPHS
+                // first graph
+                var graph1 = new AmCharts.AmGraph();
+                graph1.type = "column";
+                graph1.title = "Income";
+                graph1.valueField = "income";
+                graph1.balloonText = "Income:[[value]]";
+                graph1.lineAlpha = 0;
+                graph1.fillColors = "#ff7a00";
+                graph1.fillAlphas = 1;
+                chart.addGraph(graph1);
+
+                // second graph
+                var graph2 = new AmCharts.AmGraph();
+                graph2.type = "column";
+                graph2.title = "Expenses";
+                graph2.valueField = "expenses";
+                graph2.balloonText = "Expenses:[[value]]";
+                graph2.lineAlpha = 0;
+                graph2.fillColors = "#f5e201";
+                graph2.fillAlphas = 1;
+                chart.addGraph(graph2);
+            });
+</script>
