@@ -37,15 +37,16 @@
 	$('#survey').modal({
 		backdrop: true,
 	  keyboard: true
-	})
+	});
 	$('a.closemodal').click(function() {
 			   var qqq = $(this).closest('.modal');
 			   $(qqq).modal('hide');
 	});
 	$('#survey').on('hidden', function () {
 	  gallery.next();
-		chart.write("chartdiv");
-	})
+		chart.write('chartdiv');
+		
+	});
 </script>
 	
 <script type="text/javascript">
@@ -58,9 +59,9 @@ var	gallery,
 	dots = document.querySelectorAll('#nav li'),
 	slides = [
 			{
-				cont: '<h2 class="typewriter">Medical education: smarter</h2>\
-				<%= image_tag "consensuslogo.png", :title => "Clinical Consensus", :class => "frontlogo" %>',
-				tex: '<p>The first context-based information channel designed to effectively communicate with physicians in the manner they demand.</p>\
+				cont: '<h2 class="typewriter">Scientific collaboration made smarter</h2>\
+				<p class="center"><%= image_tag "consensuslogo.png", :title => "Clinical Consensus", :class => "frontlogo" %></p>',
+				tex: '<p>The first context-based information channel designed to effectively communicate with physicians in a forum they prefer.</p>\
 				<p class="swipemessage"><em>Please swipe to the next frame ⇢</em></p>\
 				<footer><p><a href="http://mobilezen.com/nsite"><%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></p></a></footer>'
 			},
@@ -69,7 +70,7 @@ var	gallery,
 				tex: '<p>But research shows that <strong>effective communication</strong> has less to do with content, and more to do with the <strong>context</strong> in which that <strong>content</strong> is delivered.</p>'
 			},
 			{
-				cont: '<h2 class="noisy">The environment is noisy.</h2>\
+				cont: '<h2 class="noisy">The clinical landscape is noisy.</h2>\
 				<p class="buzz">The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable. The differentiation of tumorigenic cancer stem cells into nontumorigenic cancer cells confers heterogeneity to some cancers beyond that explained by clonal evolution or environmental differences. In such cancers, functional differences between tumorigenic and nontumorigenic cells influence response to therapy and prognosis. However, it remains uncertain whether the model applies to many, or few, cancers due to questions about the robustness of cancer stem cell markers and the extent to which existing assays underestimate the frequency of tumorigenic cells. In cancers with rapid genetic change, reversible changes in cell states, or biological variability among patients, the stem cell model may not be readily testable.</p>',
 				tex: '<p class="noisy">Clinical Consensus provides its community of physicians:</p>\
 				<ul class="noisy"><li>New and meaningful solutions for patient care</li>\
@@ -92,7 +93,7 @@ var	gallery,
 			},
 			{
 				cont: '<h2 class="leftside">Community</h2>',
-				tex: '<p class="leftside">Responses from the community are delivered instantly, allowing physicians to compare their responses with those of their peers.</p>\
+				tex: '<p class="leftside">Responses from the community are delivered instantly, allowing physicians to compare and contrast their responses with those of their peers.<br /><a class="btn danger generatechart" onclick="generateChart();">Show Results</a></p>\
 				<div id="chartdiv" style="width: 100%; height: 100px;"></div>'
 			},
 			{
@@ -111,15 +112,21 @@ var	gallery,
 			{
 				cont: '<h2>Resources</h2>',
 				tex: '<p>Clinical Consensus continuously engages the physician community by providing them access to the most current information, <strong>anytime</strong>, <strong>anywhere</strong> on <strong><em>any</em> device</strong>.</p>\
+				<ul><li>Disease State</li>\
+				<li>Recent Publications</li>\
+				<li>Webinars</li>\
+				<li>Case Studies</li>\
+				<li>Treatment Guidelines</li>\
+				<li>News Feed</li></ul>\
 				<p><%= image_tag "ipad.png", :title => "iPad Consensus", :class => "ipad" %></p>'
 			},
 			{
 				cont: '<h2>Connectivity</h2>',
-				tex: '<p>Physicians from around the country are connected with key opinion leaders and given the opportunity to ask questions, discuss a case with peers, and pose real world case studies for future evaluation.</p>\
+				tex: '<p>Physicians from across the country are connected with key opinion leaders and given the opportunity to ask questions, discuss a case with peers, and pose real world case studies for future evaluation.</p>\
 				<p><%= image_tag "connections.png", :title => "Connections", :class => "connections" %></p>'
 			},
 			{
-				cont: '<h2 class="goaway">Timely and effective communication, always in context.</h2>\
+				cont: '<h2 class="goaway">Content delivered, in clinical context... Anytime. Anywhere.</h2>\
 				<h2 class="comeback">Contact<br /><%= image_tag "nsitelogo.png", :title => "N*Site", :class => "closinglogo" %><br /><a href="tel:858-243-5930">858-243-5930</a></h2><p class="comeback">Text NSite to 99699</p>',
 				tex: '<footer><p><a href="http://mobilezen.com/nsite"><%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></a></p></footer>'
 			}
@@ -246,4 +253,11 @@ gallery.onMoveIn(function () {
                 graph2.fillAlphas = 1;
                 chart.addGraph(graph2);
             });
+</script>
+
+<script type="text/javascript">
+	function generateChart() {
+		$('.generatechart').remove();
+		chart.write('chartdiv');
+	}
 </script>
