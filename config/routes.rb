@@ -3,7 +3,7 @@ SthealthSpec::Application.routes.draw do
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
+  match 'keynote' => 'pages#keynote'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
@@ -48,7 +48,7 @@ SthealthSpec::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'pages#keynote'
+  root :to => 'pages#keynote_start'
 
   # See how all your routes lay out with "rake routes"
 

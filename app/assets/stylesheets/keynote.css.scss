@@ -5,6 +5,24 @@ $yellow: #f5e201;
 
 #pages_controller {
 	
+	#keynotestart {
+		width:300px;
+		margin:0 auto;
+		p {
+			font-size:16px;
+			line-height:19px;
+			margin-bottom:25px;
+			a.startnow {
+				font-size:25px;
+				font-weight:bold;
+			}
+		}
+		img.startlogo {
+			width:100%;
+			margin:20px 0;
+		}
+	}
+	
 	#wrapper {
 		min-height:360px;
 	}
@@ -81,7 +99,7 @@ $yellow: #f5e201;
 	
 	img.ipad {
 		width:150%;
-		margin-left:-130px;
+		margin-left:-140px;
 		@media screen and (min-width:481px) {
 			width:90%;
 			margin-left:0px;
