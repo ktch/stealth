@@ -11,8 +11,8 @@ $yellow: #f5e201;
 	
 	a {
 		color:$orange;
-		cursor: hand;
-		cursor: pointer;
+		cursor:hand;
+		cursor:pointer;
 	}
 	
 	li {
@@ -67,7 +67,11 @@ $yellow: #f5e201;
 	}
 	
 	img.ipad {
-		width:90%;
+		width:150%;
+		margin-left:-130px;
+		@media screen and (min-width:481px) {
+			width:90%;
+		}
 	}
 	
 	img.results {
@@ -98,6 +102,10 @@ $yellow: #f5e201;
 				font-size:45px;
 				line-height:50px;
 		}
+	}
+	
+	h2.typewriter {
+		margin-top:-40px;
 	}
 	
 	img.frontlogo {
@@ -221,6 +229,7 @@ $yellow: #f5e201;
 		background:$orange;
 		padding:4px;
 		margin-left:15px;
+		margin-top:15px;
 		width:50%;
 	}
 	
@@ -348,10 +357,9 @@ $yellow: #f5e201;
 	}
 	
 	a.generatechart {
-		left:15px;
 		top:65%;
-		margin:40px 0px;
 		left:15px;
+		margin-top:15px;
 	}
 	
 	#swipeview-slider .swipeview-active .comeback {

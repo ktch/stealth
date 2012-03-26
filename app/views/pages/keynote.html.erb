@@ -44,8 +44,8 @@
 	});
 	$('#survey').on('hidden', function () {
 	  gallery.next();
+		$('.generatechart').remove();
 		chart.write('chartdiv');
-		
 	});
 </script>
 	
@@ -59,8 +59,8 @@ var	gallery,
 	dots = document.querySelectorAll('#nav li'),
 	slides = [
 			{
-				cont: '<h2 class="typewriter">Scientific collaboration made smarter</h2>\
-				<p class="center"><%= image_tag "consensuslogo.png", :title => "Clinical Consensus", :class => "frontlogo" %></p>',
+				cont: '<h2 class="typewriter">Communication: smarter</h2>\
+				<%= image_tag "consensuslogo.png", :title => "Clinical Consensus", :class => "frontlogo" %>',
 				tex: '<p>The first context-based information channel designed to effectively communicate with physicians in a forum they prefer.</p>\
 				<p class="swipemessage"><em>Please swipe to the next frame ⇢</em></p>\
 				<footer><p><a href="http://mobilezen.com/nsite"><%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></p></a></footer>'
@@ -98,12 +98,7 @@ var	gallery,
 			},
 			{
 				cont: '<h2>Results</h2>',
-				tex: '<p>Data is collated, and solutions are then shared within the community, along with insightful analysis from key opinion leaders, in a variety of engaging formats, like audio</p>\
-				<audio controls="controls">\
-					<source src="caseexample.m4a" type="audio/mp3" />\
-					Your browser does not support the audio element.\
-				</audio>\
-				<p>and video.</p>\
+				tex: '<p>Data is collated, and solutions are shared within the community with insightful analysis from key opinion leaders, in engaging formats, like audio and video.</p>\
 				<video controls="controls">\
 					<source src="kolsample.mp4" type="video/mp4" />\
 					Your browser does not support the video tag.\
@@ -112,12 +107,6 @@ var	gallery,
 			{
 				cont: '<h2>Resources</h2>',
 				tex: '<p>Clinical Consensus continuously engages the physician community by providing them access to the most current information, <strong>anytime</strong>, <strong>anywhere</strong> on <strong><em>any</em> device</strong>.</p>\
-				<ul><li>Disease State</li>\
-				<li>Recent Publications</li>\
-				<li>Webinars</li>\
-				<li>Case Studies</li>\
-				<li>Treatment Guidelines</li>\
-				<li>News Feed</li></ul>\
 				<p><%= image_tag "ipad.png", :title => "iPad Consensus", :class => "ipad" %></p>'
 			},
 			{
