@@ -43,12 +43,21 @@
 			   $(qqq).modal('hide');
 	});
 	$('#survey').on('hidden', function () {
-	  gallery.next();
-		$('.generatechart').remove();
-		chart.write('chartdiv');
+	  if(Modernizr.svg) {
+			gallery.next();
+			$('.generatechart').remove();
+			chart.write('chartdiv');
+			// videoFallback();
+		}
+		else {
+			gallery.next();
+			$('#chartdiv').html('<%= image_tag "chart.png", :title => "Chart", :class => "barchart" %>');
+			$('.generatechart').remove();
+			// videoFallback();
+		}
 	});
 </script>
-	
+
 <script type="text/javascript">
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
@@ -81,8 +90,7 @@ var	gallery,
 			},
 			{
 				cont: '<h2 class="typewriter">Healthcare and mobile technology: A perfect match</h2>',
-				tex: '<p>Utilizing text messaging, email and cutting edge responsive web design, Clinical Consensus delivers <strong>contextual information</strong> in a <strong>dynamic medium</strong> for professional exchange, with <strong>expert analysis</strong> from respected key opinion leaders – on <em>any</em> web-enabled device.</p>\
-				<p><a onclick="gallery.next()"><em>Here\'s how it works. ⇢</em></a></p>'
+				tex: '<p>Utilizing text messaging, email and cutting edge responsive web design, Clinical Consensus delivers <strong>contextual information</strong> in a <strong>dynamic medium</strong> for professional exchange, with <strong>expert analysis</strong> from respected key opinion leaders – on <em>any</em> web-enabled device.</p>'
 			},
 			{
 				cont: '',
@@ -99,10 +107,7 @@ var	gallery,
 			{
 				cont: '<h2>Results</h2>',
 				tex: '<p>Data is collated, and solutions are shared within the community with insightful analysis from key opinion leaders, in engaging formats, like audio and video.</p>\
-				<video controls="controls">\
-					<source src="kolsample.mp4" type="video/mp4" />\
-					Your browser does not support the video tag.\
-				</video>'
+				<iframe width="280" height="140" src="http://www.youtube.com/embed/j7fkPjPzd2o" frameborder="0"></iframe>'
 			},
 			{
 				cont: '<h2>Resources</h2>',
@@ -115,8 +120,8 @@ var	gallery,
 				<p><%= image_tag "connections.png", :title => "Connections", :class => "connections" %></p>'
 			},
 			{
-				cont: '<h2 class="goaway">Content delivered, in clinical context... Anytime. Anywhere.</h2>\
-				<h2 class="comeback">Contact<br /><%= image_tag "nsitelogo.png", :title => "N*Site", :class => "closinglogo" %><br /><a href="tel:858-243-5930">858-243-5930</a></h2><p class="comeback">Text NSite to 99699</p>',
+				cont: '<h2 class="goaway">Content in context.<br />Anytime. Anywhere.</h2>\
+				<h2 class="comeback"><%= image_tag "nsitelogo.png", :title => "N*Site", :class => "closinglogo" %><br /><a href="tel:858-243-5930">858-243-5930</a></h2><p class="comeback">Text NSite to 99699</p>',
 				tex: '<footer><p><a href="http://mobilezen.com/nsite"><%= image_tag "sthealthlogo.png", :title => "StHealth", :class => "sentencelogo" %> by <%= image_tag "nsitelogo.png", :title => "N*Site", :class => "sentencelogo" %></a></p></footer>'
 			}
 	];
@@ -246,7 +251,26 @@ gallery.onMoveIn(function () {
 
 <script type="text/javascript">
 	function generateChart() {
-		$('.generatechart').remove();
-		chart.write('chartdiv');
+		if(Modernizr.svg) {
+			$('.generatechart').remove();
+			chart.write('chartdiv');
+			// videoFallback();
+		}
+		else {
+			$('#chartdiv').html('<%= image_tag "chart.png", :title => "Chart", :class => "barchart" %>');
+			$('.generatechart').remove();
+			// videoFallback();
+		}
 	}
+</script>
+
+<script type="text/javascript" charset="utf-8">
+	// function videoFallback() {
+	// 		if(Modernizr.svg) {
+	// 		}
+	// 		else {
+	// 			$('video').remove();
+	// 			$('.videolinks').css('display','block');
+	// 		}
+	// 	}
 </script>

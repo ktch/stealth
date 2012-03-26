@@ -5,8 +5,21 @@ $yellow: #f5e201;
 
 #pages_controller {
 	
+	#wrapper {
+		min-height:360px;
+	}
+	
 	text, rect {
 		display:none;
+	}
+	
+	iframe {
+		margin-top:10px;
+		margin-left:15px;
+		@media screen and (min-width:481px) {
+				width:500px;
+				height:250px;
+		}
 	}
 	
 	a {
@@ -71,6 +84,7 @@ $yellow: #f5e201;
 		margin-left:-130px;
 		@media screen and (min-width:481px) {
 			width:90%;
+			margin-left:0px;
 		}
 	}
 	
@@ -141,6 +155,7 @@ $yellow: #f5e201;
 	
 	p.swipemessage {
 		position:absolute;
+		color:$orange;
 		bottom:60px;
 		right:15px;
 		opacity:0;
@@ -163,8 +178,7 @@ $yellow: #f5e201;
 		font-weight:bold;
 		font-size:18px;
 		top:-10px;
-		left:-15px;
-		margin:-100px;
+		margin:-100px 0px;
 		color:#999;
 		-webkit-transition:opacity 2.5s linear;
 		-webkit-transition-delay:1.5s;
@@ -226,7 +240,6 @@ $yellow: #f5e201;
 	}
 	
 	video {
-		background:$orange;
 		padding:4px;
 		margin-left:15px;
 		margin-top:15px;
@@ -274,7 +287,7 @@ $yellow: #f5e201;
 		font-size:30px;
 		font-weight:bold;
 		width:100%;
-		position:absolute;
+		position:relative;
 		z-index:10;
 		bottom:35px;
 		a#prev {
@@ -304,6 +317,10 @@ $yellow: #f5e201;
 	#nav li.selected {
 		background:rgba(248, 0, 0, .6);
 	}
+	
+	#swipeview-slider {
+		min-height:360px;
+	}
 
 	#swipeview-slider > div {
 		position:relative;
@@ -327,6 +344,11 @@ $yellow: #f5e201;
 
 	#swipeview-slider .swipeview-active aside {
 		opacity:1;
+	}
+	
+	.nosvg {
+		height:100px;
+		background:red;
 	}
 	
 	.comeback {
